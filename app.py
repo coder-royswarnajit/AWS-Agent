@@ -160,8 +160,8 @@ def get_bedrock_client():
     return boto3.client(
         "bedrock-agent-runtime",
         region_name=REGION,
-        aws_access_key_id=os.environ.get('AWS_ACCESS_KEY_ID'),
-        aws_secret_access_key=os.environ.get('AWS_SECRET_ACCESS_KEY')
+        aws_access_key_id=st.secrets["AWS_ACCESS_KEY_ID"],
+        aws_secret_access_key=st.secrets["AWS_SECRET_ACCESS_KEY"]
     )
 
 
